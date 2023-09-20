@@ -1,0 +1,114 @@
+<header class="main-head">
+  <div class="nav">
+      <div class="logo">
+          <a href="/dashboard"> WatFriends</a>
+      </div>
+      <div class="menu">
+          <nav>
+              <ul>
+                  <li>
+
+                  </li>
+                  <li>
+                      <a href="/users/logout">
+                          LOG OUT
+                      </a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+</header>
+
+<div class="back-button">
+  <a href="/dashboard">Back to dashboard</a>
+</div>
+
+<div class="body-login">
+  <h1>Feedback form</h1>
+   
+  <%-include ('./partials/messages') %> <br>
+  <div class="info-text">
+    You are logged in as <%= username %> <br/>
+    Your registered email is <%= email %> <br/><br/>
+  </div>
+  <form action="/feedback" method="POST" class="form">
+    <div class="form-group"> 
+      <label for="name" class="body-text">Preferred Name</label> 
+      <input 
+        type="name" 
+        id="name" 
+        name="yourname" 
+        class="form-control"  
+        placeholder="Enter Preferred Name"
+        value="<%= typeof yourname != 'undefined' ? yourname : '' %>"
+      />
+    </div> 
+    
+    <br>
+    
+    <div class="form-group"> 
+      <label for="name" class="body-text">What did you like about WatFriends?</label> 
+      <input 
+      type="name" 
+      id="name" 
+      name="likes" 
+      class="form-control"  
+      placeholder="Enter your response"
+      value="<%= typeof likes != 'undefined' ? likes : '' %>"
+      />
+    </div>
+
+    <br>
+
+    <div class="form-group"> 
+      <label for="name" class="body-text">What did you dislike about WatFriends?</label> 
+      <input 
+      type="name" 
+      id="name" 
+      name="dislikes" 
+      class="form-control"  
+      placeholder="Enter your response"
+      value="<%= typeof dislikes != 'undefined' ? dislikes : '' %>"
+      />
+    </div>
+
+    <br>
+
+    <div class="form-group"> 
+      <label for="name" class="body-text">What features would you like WatFriends to add?</label> 
+      <input 
+        type="name" 
+        id="name" 
+        name="features" 
+        class="form-control"  
+        placeholder="Enter your response"
+        value="<%= typeof features != 'undefined' ? features : '' %>"
+      />
+    </div> 
+
+    <div class="form-group"> 
+      <label for="name" class="body-text">Any other comments/ reviews/ suggestions/ feedback/ questions?</label> 
+      <input 
+        type="name" 
+        id="name" 
+        name="otherQuestions" 
+        class="form-control"  
+        placeholder="Enter your response"
+        value="<%= typeof otherQuestions != 'undefined' ? otherQuestions : '' %>"
+      />
+    </div>
+
+    <button type="submit" class="login-button">Submit</button>    
+
+    <a href="/dashboard" class="login-button">Cancel</a>
+  </form>
+  
+  <div class="left-img">
+    <img src="../public/images/loginLeft.svg" alt="">
+  </div>
+  <div class="right-img">
+    <img src="../public/images/loginRight.svg" alt="">
+  </div>
+
+</div>

@@ -1,0 +1,22 @@
+<%-include ('./partials/genericHeader') %>
+
+<section class="matching-form questions">
+    <div class="back-button">
+        <a href="/dashboard">Back to dashboard</a>
+    </div>
+    <section class="questions">
+        <%-include ('./partials/messages') %>
+        <form action="/applySecondRound" method="POST">
+            <% if (!applied) { %>
+                <h5 class="second-round-1">You are considered eligible for the second round only if you are not satisfied with your current match OR if you are unmatched.</h5>
+                <h5 class="second-round-2">Do you want to apply for the second round of WatFriends?</h5>
+                <div class="valentines-button">
+                  <button type="submit" class="login-button" value="Yes">Yes</button>
+                    <a href="/dashboard" class="login-button">Back</a>
+                </div>
+            <% } else { %>
+                <h5 class="second-round-1">You have already applied for the second round. You cannot apply right now</h5>
+            <%}%>
+        </form>
+    </section>
+</section>

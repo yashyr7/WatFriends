@@ -1,0 +1,47 @@
+<%-include ('./partials/header') %>
+
+<div class="body-login">
+  <h1 style="padding-top: 10rem ;">WatFriends</h1>
+  <%-include ('./partials/messages') %>
+  <form action="/users/login" method="POST" class="form">
+    <div class="form-group">
+      <label for="email"></label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="Email Address" />
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="password"></label>
+      <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
+
+    </div>
+    <button type="submit" class="login-button">Login</button>
+  </form>
+  
+  <div class="form-text">
+    Already logged in?
+    <a href="/dashboard">Go to Dashboard</a>
+  </div>
+
+  <div class="form-text">
+    Don't have an account?
+    <a href="/users/register">Sign Up!</a>
+  </div>
+
+  <div class="form-text">
+    Forgot Password?
+    <a href="/users/resetPassword">Click here</a>
+  </div>
+
+  <div class="form-text">
+    Didn't receive email?
+    <a href="/users/resendEmail">Click here</a>
+  </div>
+  
+  <div class="left-img">
+    <img src="../public/images/loginLeft.svg" alt="">
+  </div>
+  <div class="right-img">
+    <img src="../public/images/loginRight.svg" alt="">
+  </div>
+
+</div>

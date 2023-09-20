@@ -1,0 +1,94 @@
+<header class="main-head">
+  <div class="nav">
+    <div class="logo">
+      <a href="/index"> <img src="../public/images/logo.svg" alt="" id="logo"></a>
+    </div>
+    <div class="menu">
+      <nav>
+        <ul>
+          <li id="selected-menu-item">
+            <a href="/users/login" style="text-decoration: underline;"> LOGIN</a>
+
+          </li>
+          <li>
+            <a href="/users/register">
+              SIGN UP
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="body-login">
+  <h1 style="padding-top: 10rem ;">Resend Confirmation Email</h1>
+  <%-include ('./partials/messages') %>
+  <form action="/users/resendEmail" method="POST" class="form">
+    <div class="form-group">
+      <label for="email"></label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="Enter Registered Email"
+        value="<%= typeof email != 'undefined' ? email : '' %>" />
+    </div>
+    <br>
+    
+    <button type="submit" class="login-button">Send confirmation email again</button>
+  </form>
+
+  <div class="form-text" style="font-size: 1.5rem;">
+    Don't Have An Account?
+    <a href="/users/register">Register</a>
+  </div>
+  <div class="form-text" style="font-size: 1.5rem;">
+    Have An Account?
+    <a href="/users/login">Login</a>
+  </div>
+  <div class="left-img">
+    <img src="../public/images/loginLeft.svg" alt="">
+  </div>
+  <div class="right-img">
+    <img src="../public/images/loginRight.svg" alt="">
+  </div>
+
+</div>
+
+
+
+
+
+
+<!-- 
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3">
+        <i class="fas fa-user-plus"></i> Resend Confirmation Email
+      </h1>
+
+      
+
+      <form action="/users/resendEmail" method="POST">
+        <div class="form-group">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter Registered Email"
+            value="
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary btn-block">
+          Send confirmation email again
+        </button>
+
+      </form>
+      <p class="lead mt-4">Don't Have An Account? <a href="/users/register">Register</a>
+        <br />
+        Have An Account? <a href="/users/login">Login</a>
+      </p>
+
+    </div>
+  </div>
+  </ div>
+
+-->

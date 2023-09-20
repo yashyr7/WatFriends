@@ -1,0 +1,160 @@
+.project-buddy-view{
+    width: 90%;
+    margin: 0 auto;
+    min-height: 80vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+.project-buddy-view h1{
+    padding: 0.75rem;
+    font-size: 3rem;
+    color: #5E277D;
+    width: auto; /* 50%; */
+border-bottom: solid #5E277D 1px;
+}
+.card-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height:72vh;
+    align-items: center;
+}
+.card{
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    width: 277px;
+height: 372px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 2rem;
+}
+.card h1{
+    border: none;
+    width: auto;
+    font-size: 2rem;
+    padding: 0.25rem;
+}
+.card .purple-text{
+    color: #5E277D;
+}
+.card > div{
+    padding: 1rem;
+}
+.card .buttons{
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+}
+.card .button-green{
+    width: 100px;
+    padding: 1rem 1.75rem;
+    border: 1px solid #009220;
+    margin-right: 1rem;
+    color: #009220;
+    background-color: #fff;
+    transition: 0.5s;
+cursor: pointer;
+}
+.card .button-purple{
+    width: 100px;
+    padding: 1rem 1.75rem;
+    border: 1px solid #5E277D;
+    color: #5E277D;
+    background-color: #fff;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card .button-green:hover{
+    background-color: #009220;
+    color: #fff;
+}
+.card .button-purple:hover{
+    background-color: #5E277D;
+    color: #fff;
+}
+
+/* A Dark Overlay that sits between the main page and the modal so the Modal pops out */
+.popup-position{
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(250,250,250,0.7);
+    width: 100%;
+    height: 100%;
+}
+
+/* The Modal Wrapper    */
+.popup-wrapper{
+    text-align: left;
+    padding-top: 25ch;
+}
+
+/* The Modal Container */
+.popup-container{
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    margin: 70px auto;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    min-width: 277px;
+    min-height: 372px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-container h1 {
+    margin-bottom: 1rem;
+}
+
+.popup-container > div {
+    padding: 1rem;
+    text-align: center;
+}
+
+.popup-container .purple-text{
+    color: #5E277D;
+}
+
+.search {
+    outline: none;
+    height: 4rem;
+    border: 1px solid #5C81E2;
+    border-radius: 20px;
+    color: #00268A;
+    font-size: 1.75rem;
+    padding: 1rem;
+    min-width: 400px;
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+.search-button {
+    background: #C2C8E1;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    margin: 1.5rem 2rem 2rem 2rem;
+    color: #00268A;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 430px){
+    .search{
+        min-width: 90vw;
+    }
+}

@@ -1,0 +1,62 @@
+<%-include ('./partials/genericHeader') %>
+
+<link rel="stylesheet" href="../public/stylesheets/projectBuddyViews.css">
+<div class="back-button">
+  <a href="/dashboard">Back to dashboard</a>
+</div>
+<section class="project-buddy-view">
+  <h1>Postings</h1>
+  <form action="/myPostings" method="POST" class="form">
+    <div class="card-section">
+      <%for(var x =0; x<result.length; x++) {%>
+      <div class="card">
+        <h1> <%=result[x].preferredName%></h1>
+        <div> <span class="purple-text">Skills: </span><%=result[x].skills %></div>
+        <div>
+          <span class="purple-text">Interests: </span><%=result[x].interests %>
+        </div>
+        <div class="buttons">
+          <div class="button-green" onclick="toggle_modal('delete<%=x%>')">Delete</div>
+          <div class="button-purple" onclick="toggle_modal('post<%=x%>')">View</div>
+        </div>
+      </div>
+      <div class="popup-position delete<%=x%>">
+        <div class="popup-wrapper">
+            <div class="popup-container">
+                <h1> Are you sure? </h1>
+                <div class="modal-footer buttons">
+                    <button type="button" class="login-button" onclick="toggle_modal('delete<%=x%>')">No</button>
+                    <button type="button" class="login-button"><a href="/myPostings/delete/<%=result[x]._id%>">Yes</a></button>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="popup-position post<%=x%>">
+        <div class="popup-wrapper">
+            <div class="popup-container">
+                <h1> <%=result[x].preferredName%></h1>
+                <div><span class="purple-text">Skills: </span><%=result[x].skills %></div>
+                <div><span class="purple-text">Interests: </span><%=result[x].interests %></div>
+                <div><span class="purple-text">Description: </span><%=result[x].description %></div>
+                <div><span class="purple-text">Instagram: </span><%=result[x].instagram %></div>
+                <div class="modal-footer">
+                    <button type="button" class="login-button" onclick="toggle_modal('post<%=x%>')">Close</button>
+                </div>
+            </div>
+        </div>
+      </div>
+      <%}%>
+  </div>
+  </form>
+  </section>
+  <%-include ('./partials/footer') %>
+
+<script>
+  function toggle_modal(id) {
+      var e = document.getElementsByClassName(id);
+      if(e[0].style.display == 'block')
+          e[0].style.display = 'none';
+      else 
+          e[0].style.display = 'block';
+  }
+</script>

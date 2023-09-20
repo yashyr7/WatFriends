@@ -1,0 +1,989 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+  }
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: inherit;
+    color: inherit;
+}
+.error{
+    color: #D65B5B;
+    font-size: 1.85rem;
+}
+
+.success{
+    color: #009220;
+    font-size: 1.85rem;
+}
+
+/* Second round styles */
+
+.second-round-container {
+    margin: auto;
+}
+
+.second-round-1 {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.5rem;
+    padding: 5rem 1rem 0.75rem 1rem;
+}
+
+.second-round-2 {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.5rem;
+    padding: 0.75rem 1rem 1rem 3rem;
+}
+
+/* Dashboard styles */
+
+.last-row {
+    padding-bottom: 50px;
+}
+
+.dashboard-heading {
+    font-size: 3.5rem;
+    font-weight: 300;
+    padding: 20px 50px 5px 50px;
+}
+
+.upcoming-events {
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding: 20px 50px 5px 50px;
+}
+
+.dashboard-welcome {
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 5px 50px 10px 50px;
+}
+
+.dashboard-h1-div {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;    
+    font-family: 'Nunito', sans-serif;
+}
+
+.dashboard-h1 {
+    border-bottom: solid 2px;
+}
+
+.dashboard-btn-div {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+.dashboard-button img {
+    width: 50%;
+}
+
+.round-two img{
+    width: 65%;
+}
+
+.dashboard-button div {
+    margin-top: 10px;
+}
+
+.dashboard-button {
+    background-color: #8165C9;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: #ffffff;
+    border-radius: 5%;
+    padding: 30px;
+    font-size: 2.25rem;
+    width: 330px;
+}
+
+.dashboard-button:hover {
+    background-color: #C1C8E4;
+}
+
+.dashboard-button:active {
+    background-color: #D2D2D2;
+}
+
+@media only screen and (max-width: 1200px) {
+    .dashboard-button {
+        width: 250px;
+        font-size: 2.5rem;
+        padding: 30px 10px;
+    }
+
+    .dashboard-btn-div {
+        grid-gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 912px) {
+
+    .dashboard-button {
+        width: 250px;
+        font-size: 2.5rem;
+        padding: 30px 10px;
+    }
+
+    .landing-wwd .cards-section .card.last-card {
+        margin: 3rem 3rem 2rem 3rem;
+    }
+
+    .dashboard-btn-div {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .dashboard-heading {
+        text-align: center;
+    }
+    .upcoming-events {
+        text-align: center;
+    }
+
+    .dashboard-welcome {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .dashboard-h1-div {
+        margin-top: 20px;
+    }
+
+    .round-two {
+        content: "Round 2";
+    }
+}
+
+/* Info style */
+
+.info-text {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.75rem;
+}
+
+/* Body styles */
+
+.body-text {
+    padding: 1rem;
+    text-align: justify;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+}
+
+/* header styles */
+header{
+    background-color: #483930;
+    color: #fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: 0;
+    position: sticky;
+    z-index: 2;
+}
+h1, h2, h3, h4{
+    font-weight: 400;
+}
+.main-head{
+    display: flex;
+    justify-content: start;
+    font-size: 2rem;
+}
+
+.nav{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    min-height: 10vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo {
+    /* flex: 2 1 40rem; */
+    width: 60vw;
+    font-family: 'Pattaya', sans-serif;
+    font-size: 3rem;
+
+}
+.menu {
+    /* flex: 1 1 40rem; */
+    font-weight: 400;
+    width: 25vw;
+}
+
+
+nav ul {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.logo img  {
+  height: 7rem;
+  width: 7rem;
+}
+#selected-menu-item{
+    text-decoration: underline 3px solid;
+}
+
+/* login styles */
+.body-login{
+    min-height: 90vh;
+    text-align: center;
+    padding: 3rem 0;
+    font-family: 'Nunito', sans-serif;
+}
+.body-login h1{
+    font-family: 'Pattaya', sans-serif;
+    font-size: 6rem;
+    color: #00268A;
+    padding: 2rem;
+}
+.body-login .form{
+    width: 100%;
+}
+.body-login .form-group{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.body-login .login-button {
+    margin: 3rem;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+.body-login input[type = email], .body-login input[type = password], .body-login input[type = name]{
+border: none;
+outline: none;
+height: 4rem;
+border: 1px solid #5C81E2;
+border-radius: 20px;
+color: #00268A;
+font-size: 1.75rem;
+padding: 1rem;
+min-width: 400px;
+text-align: center;
+margin: 1rem;
+
+}
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.login-button{
+    background: #C2C8E1;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    margin: 3rem 2rem;
+    color: #00268A;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+.body-login .form-text{
+    color: #888888;
+    font-size: 2em;
+    padding: 0.25rem;
+}
+.body-login .form-text a{
+    color: #00268A;
+}
+.body-login .form-text a:hover{
+    text-decoration: #00268A underline 1px;
+}
+
+.body-login .right-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+}
+.body-login .left-img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Landing Page */
+
+/* Landing Page - Section 1 */
+.hero-landing{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height:85vh;
+    position: relative;
+}
+
+.hero-landing .col-1, .hero-landing .col-2{
+    width: 50%;
+    /* border: solid; */
+}
+.hero-landing .col-2{
+    background-image: url(../images/landingPage.svg);
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+margin:  4rem;
+}
+.hero-landing .col-1{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 3rem;
+}
+.hero-landing .col-1 h2{
+    color: #5C81E2;
+    padding: 4.5rem;
+}
+.hero-landing .col-1 h3{
+    padding: 4.5rem;
+    text-align: justify;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+}
+.hero-landing .capsule{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 75px;
+    display: flex;
+    min-height: 7rem;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    margin: 4.5rem;
+}
+.hero-landing .capsule .row-1{
+    width: 50%;
+    color: #5C81E2;
+}
+.hero-landing .capsule .row-2{
+    background: #5C81E2;
+    width: 50%;
+    min-height: 7rem;
+    border-radius: 0px 75px 75px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+/* Landing Page - Section 2 */
+
+.landing-wwd{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height:90vh;
+    text-align: center;
+    font-size: 1.5rem;
+    flex-direction: column;
+    padding: 4rem 0 ;
+}
+.landing-wwd h2{
+    color: #5C81E2;
+    font-size: 5rem;
+    text-decoration: underline;
+    font-weight: 300;
+    padding: 2rem;
+    padding-bottom: 4rem;
+}
+.landing-wwd .cards-section{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+}
+.landing-wwd .cards-section .card{
+    width: 300px;
+    height: 400px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.landing-wwd .cards-section .card img{
+    position: absolute;
+    border-radius: 100%;
+    height: 230px;
+    width: 230px;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.landing-wwd .cards-section .card h3{
+    color: #5C81E2;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.landing-wwd .cards-section .card .card-text{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.75rem;
+    font-family: 'nunito', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    width: 90%;
+}
+
+/* meet team */
+
+.meet-last-row-one, .meet-last-row-two {
+    margin: 5rem 2.5rem 5rem 5.5rem;
+}
+
+.landing-wwd h3 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.special-thanks{
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.team-fix {
+    margin: 5rem 2.5rem 15rem 5.5rem;
+}
+
+.team-justify {
+    justify-content: space-evenly;
+}
+
+ /* Footer */
+footer{
+    background-color: #483930;
+    min-height:14vh;
+    display: flex;
+    align-items: center;
+}
+.footer-content{
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+.footer-content .left{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+.footer-content .right{
+    text-align: right;
+}
+.footer-content .mid{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+}
+.footer-content .mid .made-by{
+    min-height: 2rem;
+    display: flex;
+    font-size: 1.5rem;
+}
+.footer-content .mid .typewriting{
+    font-size: 2rem;
+}
+/* form styles */
+
+.form-input-name {
+    width: 40%;
+}
+
+.question-text {
+    font-weight: 900;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.valentines-button {
+    text-align: center;
+}
+
+.back-button{
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.matching-form .login-button {
+    margin: 3rem 3rem;
+}
+
+.matching-form .form-text {
+    margin: 0rem auto 2rem auto;
+    font-size: 2.5rem;
+}
+
+.matching-form .questions h1{
+    text-align: center;
+    font-size: 3rem;
+    color: #5E277D;
+    font-weight: 300;
+    padding: 1rem;
+    border-bottom: #5E277D solid 2px;
+    width: 50%;
+    margin: 1rem auto;    /* text-decoration: solid underline; */
+}
+.matching-form .questions{
+    font-size: 2.75rem;
+    font-family: 'Nunito', sans-serif;
+    width: 85%;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+}
+.matching-form .form-group{
+    padding: 1rem;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.matching-form .text-field input[type="text"]{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-bottom: 2px solid #5E277D;
+}
+.matching-form .question-area{
+    padding: 1rem 0;
+}
+.matching-form .radio-round , .matching-form .radio-square, .matching-form .purple, .matching-form .blue, .matching-form .grey   {
+    display: flex;
+    position: relative;
+    padding-left: 3.4rem;
+    margin-bottom: 12px;
+    margin-left: 2rem;
+    /* align-items: center;
+    justify-content: center; */
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    justify-content: center;
+    width: fit-content;
+/* background-color: #D65B5B; */
+}
+  .matching-form .radio-round .checkmark{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+    border: solid #5E277D 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .matching-form .purple .checkmark, 
+  .matching-form .grey .checkmark,
+  .matching-form .blue .checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+    border: solid #5E277D 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.matching-form .blue .checkmark{
+    border: solid #5C81E2 1px;
+}
+.matching-form .grey .checkmark{
+    border: solid #8a8a8a 1px;
+}
+.matching-form .big .checkmark{
+    height: 4.6rem;
+    width: 4.6rem; 
+}
+.matching-form .med .checkmark{
+    height: 4rem;
+    width: 4rem; 
+}
+.matching-form .small .checkmark{
+    height: 3.2rem;
+    width: 3.2rem; 
+}
+.matching-form .radio-round .checkmark:hover, .matching-form .radio-square .checkmark:hover, .matching-form .purple .checkmark:hover{
+  background-color: rgba(94, 39, 125, 0.5);
+  transition: 0.5s;
+}
+.matching-form .blue .checkmark:hover{
+    background-color: rgba(92, 129, 226, 0.5);
+    transition: 0.5s;
+  }
+  .matching-form .grey .checkmark:hover{
+    background-color: rgba(138, 138, 138, 0.5);
+    transition: 0.5s;
+  }
+.matching-form .radio-round input[type="radio"]:checked ~ .checkmark,
+.matching-form .radio-square input[type="checkbox"]:checked ~ .checkmark,
+.matching-form .purple input[type="radio"]:checked ~ .checkmark{
+    background-color: #5E277D;
+    transition: 0.5s;
+  }
+  .matching-form .grey input[type="radio"]:checked ~ .checkmark{
+    background-color: #8a8a8a;
+    transition: 0.5s;
+  }
+  .matching-form .blue input[type="radio"]:checked ~ .checkmark{
+    background-color: #5C81E2;
+    transition: 0.5s;
+  }
+  .matching-form .radio-square .checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 5px;
+    border: solid #5E277D 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.matching-form select{
+    background-color: rgba(145, 97, 172, 0.3);
+    padding: 0.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.matching-form  .seven-options{
+    display: flex;
+    flex-direction: column;
+}
+.seven-options-radio{
+    width: 90%;
+    justify-content: space-evenly;
+    display: flex;
+    margin: 1rem;
+}
+/* Hide the browser's default checkbox */
+input[type="radio"], input[type="checkbox"]  {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+
+/* Media queries */
+@media screen and (max-width: 1200px){
+    html {
+        font-size: 50.5%;
+      }
+    .hero-landing .col-2{
+      background-size: contain;    
+    }
+    .landing-wwd .cards-section .card{
+        width: 225px;
+        height: 350px;
+    }
+    .landing-wwd .cards-section .card img{
+        height: 175px;
+        width: 175px;
+    }
+    .team-fix {
+        margin: 4rem 3.5rem 17rem 3.5rem;
+    }
+    .matching-form .big .checkmark{
+        height: 4rem;
+        width: 4rem; 
+    }
+    .matching-form .med .checkmark{
+        height: 3.2rem;
+        width: 3.2rem; 
+    }
+    .matching-form .small .checkmark{
+        height: 2.8rem;
+        width: 2.8rem; 
+    }
+    .seven-options-text {
+        font-size: 2rem;
+    }
+
+    .matching-form .grey .checkmark {
+        height: 2.2rem;
+        width: 2.2rem; 
+    }
+}
+@media screen and (max-width: 912px){
+    html {
+        font-size: 45%;
+      }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        width: 100%;
+    }
+    .body-login img{
+        opacity: 0.3;
+    }
+    .landing-wwd .cards-section {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    .landing-wwd .cards-section .card{
+        width: 200px;
+        height: 300px;
+        margin: 3rem 3rem 15rem 3rem;
+    }
+    .hero-landing .col-1{
+        padding: 3rem 0;
+    }
+    .matching-form .questions h1 {
+        width: 100%;
+    }
+    .landing-wwd .cards-section .card.meet-last-row-one, 
+    .landing-wwd .cards-section .card.meet-last-row-two {
+        margin: 0rem 3rem 5rem 3rem;
+    }
+    .matching-form .big .checkmark{
+        height: 3.6rem;
+        width: 3.6rem; 
+    }
+    .matching-form .med .checkmark{
+        height: 2.9rem;
+        width: 2.9rem; 
+    }
+    .matching-form .small .checkmark{
+        height: 2.4rem;
+        width: 2.4rem; 
+    }
+
+    .matching-form .grey .checkmark {
+        height: 2.2rem;
+        width: 2.2rem; 
+    }
+}
+
+@media screen and (max-width: 740px){
+    .body-login img{
+        display: none;
+    }
+
+    .form-input-name {
+        width: 60%;
+    }
+
+    .hero-landing .col-1{
+        width: 100%;
+        /* background-color: violet; */
+        position: absolute;
+        min-height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+    }
+    .hero-landing .col-2{
+        width: 100%;
+        z-index: -1;
+        opacity: 0.4;
+        min-height: 85vh;
+    }
+    .landing-wwd .cards-section .card{
+        margin: 3rem 3rem 15rem 3rem;
+    }
+
+    .landing-wwd .cards-section .card.meet-last-row-one, 
+    .landing-wwd .cards-section .card.meet-last-row-two {
+        margin: 3rem 3rem 5rem 3rem;
+    }
+
+    .landing-wwd .cards-section .card img{
+        height: 125px;
+        width: 125px;
+        transform: translate(-50%, 70%);
+    }
+    .landing-wwd .cards-section{
+        height: auto;
+    }
+
+    .matching-form .big .checkmark{
+        height: 3.0rem;
+        width: 3.0rem; 
+    }
+    .matching-form .med .checkmark{
+        height: 2.5rem;
+        width: 2.5rem; 
+    }
+    .matching-form .small .checkmark{
+        height: 2.2rem;
+        width: 2.2rem; 
+    }
+    .seven-options-text {
+        font-size: 1.5rem;
+    }
+
+    .matching-form .grey .checkmark {
+        height: 2.0rem;
+        width: 2.0rem; 
+    }
+    
+    .matching-form .purple, .matching-form .blue, .matching-form .grey {
+        margin-left: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .landing-wwd .cards-section .card.meet-last-row-one {
+        margin: 3rem 3rem 10rem 3rem;
+    }
+    .matching-form .big .checkmark{
+        height: 2.5rem;
+        width: 2.5rem; 
+    }
+    .matching-form .med .checkmark{
+        height: 2.3rem;
+        width: 2.3rem; 
+    }
+    .matching-form .small .checkmark{
+        height: 2.1rem;
+        width: 2.1rem; 
+    }
+    .seven-options-text {
+        font-size: 1.2rem;
+    }
+
+    .matching-form .grey .checkmark {
+        height: 2.0rem;
+        width: 2.0rem; 
+    }
+}
+
+@media screen and (max-width: 430px){
+    html {
+        font-size: 42.5%;
+      }
+    .logo {
+        /* flex: 2 1 40rem; */
+        width: 60vw;
+    }
+    .menu {
+        /* flex: 1 1 40rem; */
+        font-weight: 400;
+        width: 25vw;
+    }
+    .body-login input[type = email], .body-login input[type = password], .body-login input[type = name] {
+        min-width: 90vw;
+    }
+
+    .search{
+        min-width: 90vw;
+    }
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-content .left, .footer-content .mid, .footer-content .right{
+        text-align: center;
+        padding: 1rem;
+    }
+    .footer-content .left img{
+        padding: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1024px) and (min-height: 1000px){
+
+    .hero-landing{
+        font-size: 70%;
+    }
+    .hero-landing .col-1{
+        width: 100%;
+        position: absolute;
+        min-height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+    }
+    .hero-landing .col-2{
+        width: 100%;
+        z-index: -1;
+        opacity: 0.3;
+        min-height: 85vh;
+    }
+
+    .matching-form .big .checkmark{
+        height: 2.3rem;
+        width: 2.3rem; 
+    }
+    .matching-form .med .checkmark{
+        height: 2.1rem;
+        width: 2.1rem; 
+    }
+    .matching-form .small .checkmark{
+        height: 2.0rem;
+        width: 2.0rem; 
+    }
+
+    .matching-form .grey .checkmark {
+        height: 1.9rem;
+        width: 1.9rem; 
+    }
+
+}

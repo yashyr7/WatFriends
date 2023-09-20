@@ -1,0 +1,88 @@
+<%-include ('./partials/genericHeader') %>
+<div class="back-button">
+  <a href="/dashboard">Back to dashboard</a>
+</div>
+<div class="body-login">
+  <h1>Register for Project Buddy</h1>
+  <%-include ('./partials/messages') %>
+  <%-include ('./partials/messages') %> 
+  <br>
+  <div class="info-text">
+    You are logged in as <%= username %> <br/>
+    Your registered email is <%= email %> <br/><br/>
+  </div>
+
+    <form action="/projectBuddyForm" method="POST"> 
+        <div class="form-group"> 
+          <label for="name" class="body-text">Preferred Name*</label> 
+          <input 
+            type="name" 
+            id="name" 
+            name="yourname" 
+            class="form-control"  
+            placeholder="Enter your Preferred Name"
+            value="<%= typeof yourname != 'undefined' ? yourname : '' %>"
+          />
+        </div> 
+   
+          <div class="form-group"> 
+            <label for="name" class="body-text">Skills*</label> 
+            <input 
+              type="name" 
+              id="name" 
+              name="skills" 
+              class="form-control"  
+              placeholder="Enter your skills"
+              value="<%= typeof skills != 'undefined' ? skills : '' %>"
+            />
+          </div> 
+
+          <div class="form-group"> 
+            <label for="name" class="body-text">What are you interested in/ Your project details?*</label> 
+            <input 
+              type="name" 
+              id="name" 
+              name="interests" 
+              class="form-control"  
+              placeholder="Enter your Interests"
+              value="<%= typeof interests != 'undefined' ? interests : '' %>"
+            />
+          </div> 
+
+          <div class="form-group"> 
+            <label for="name" class="body-text">Anything you want to add?</label> 
+            <input 
+              type="name" 
+              id="name" 
+              name="description" 
+              class="form-control"  
+              placeholder="Enter Description"
+              value="<%= typeof description != 'undefined' ? description : '' %>"
+            />
+          </div> 
+          
+          <div class="form-group"> 
+            <label for="name" class="body-text">Enter your instagram id (leave blank if you are not comfortable in revealing)</label> 
+            <input 
+              type="name" 
+              id="name" 
+              name="instagram" 
+              class="form-control"  
+              placeholder="Your instagram id"
+              value="<%= typeof instagram != 'undefined' ? instagram : '' %>"
+            />
+          </div>
+          <button type="submit" class="login-button">Register</button>
+          <a href="/dashboard" class="login-button">Cancel</a>
+        </form>
+        
+      <div class="left-img">
+        <img src="../public/images/loginLeft.svg" alt="">
+      </div>
+      <div class="right-img">
+          <img src="../public/images/loginRight.svg" alt="">
+      </div>
+  
+    </div> 
+  </div> 
+</div>
